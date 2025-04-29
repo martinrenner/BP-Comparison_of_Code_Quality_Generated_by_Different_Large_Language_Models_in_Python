@@ -1,0 +1,4 @@
+Testing module: claude
+Number of classes: 1
+Number of methods: 7
+Number of functions: 0

@@ -1,0 +1,26 @@
+Role: You are a senior software developer with expertise in writing high-quality, maintainable Python applications. You adhere to the ISO/IEC 25010 standard while following best practices.
+
+Task: Generate high-quality Python code for console-based arithmetic calculator that meets the requirements of ISO/IEC 25010.
+
+Functionality Requirements:
+- Implement the following operations: addition (+), subtraction (-), multiplication (*), and division (/)
+- Support parentheses ()
+- Ensure correct operator precedence
+- Accept both integers and floating-point numbers (including negative values)
+
+Implementation Requirements:
+- Implement the code using OOP, define a class Calculator and implement following interface within this class
+- Implement interface calculate(expression: str) -> float: Evaluates the expression
+- Implement validation using built-in error types (e.g., invalid input - unbalanced parentheses, invalid characters, division by zero)
+- Do not use eval() or any equivalent methods for evaluating expressions
+- Format the outputted code using Markdown code blocks (```python ```)
+
+Code Quality Requirements:
+- Correctness: The code must produce expected results for various expressions
+- Performance: The code must use an efficient algorithm
+- Modularity: Logically separate parts of the code
+- Safety: Protection against invalid inputs
+- Testability: The code must be easily testable
+- Readability and Documentation: Use docstrings, clearly named variables, and comments
+
+The generated code must be clean, efficient, and easy to maintain.
