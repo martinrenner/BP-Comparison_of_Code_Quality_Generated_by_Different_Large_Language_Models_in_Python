@@ -1,0 +1,95 @@
+Role: You are a senior software developer with expertise in writing high-quality, maintainable Python applications. You adhere to the ISO/IEC 25010 standard while following best practices.
+
+Task: Generate high-quality Python code for console-based todo list app that meets the requirements of ISO/IEC 25010.
+
+Functionality Requirements:
+- Implement the following functions for interaction with todo list: add, remove, search, finish, get_all, clear_all
+
+Implementation Requirements:
+- Implement the code using OOP, define a class TaskManager and implement following interface within this class
+- Implement interface
+    - add(task_name: str, task_description: str) -> int: Adds a task and returns its unique ID
+    - remove(task_id: int) -> bool: Removes a task by ID and returns success status
+    - search(task_term: str) -> list[dict]: Searches tasks by name or description and returns matching results
+    - finish(task_id: int) -> bool: Marks a task as completed
+    - get_all() -> list[dict]: Retrieves all tasks with their details
+    - clear_all() -> bool: Deletes all tasks and returns success status
+- When returning a task, include all information in the following format: (id, task_name, task_description, is_finished)
+- Implement validation using built-in error types (e.g., invalid inputs - empty strings, negative IDs, non-existent tasks)
+- Data Storage: Store tasks in an in-memory data structure
+- Efficiency: Optimize lookups, insertions, and deletions
+- Error Handling: Gracefully manage errors (e.g., invalid IDs, empty searches)
+- Format the outputted code using Markdown code blocks (```python ```)
+
+Code Quality Requirements:
+- Correctness: The code must produce expected results for various expressions
+- Performance: The code must use an efficient algorithm
+- Modularity: Logically separate parts of the code
+- Safety: Protection against invalid inputs
+- Testability: The code must be easily testable
+- Readability and Documentation: Use docstrings, clearly named variables, and comments
+
+Use the following examples as references for code quality and structure:
+
+Example 1: Currency Converter
+```python
+def convert_currency(amount: float, rate: float) -> float:
+    """
+    Converts an amount using an exchange rate.
+
+    Args:
+        amount (float): The original amount in the source currency.
+        rate (float): The exchange rate.
+
+    Returns:
+        float: The converted amount, rounded to two decimal places.
+    """
+    return round(amount * rate, 2)
+```
+
+Example 2: Normalizing a Mathematical Expression (Whitespace Removal & Character Validation)
+```python
+def normalize_expression(expression: str) -> str:
+    """
+    Normalizes a mathematical expression by removing spaces and validating characters.
+
+    Args:
+        expression (str): A mathematical expression as a string.
+
+    Returns:
+        str: The normalized expression without spaces.
+
+    Raises:
+        ValueError: If the expression contains invalid characters.
+    """
+    allowed_chars = set("0123456789+-*/(). ")
+    if not all(char in allowed_chars for char in expression):
+        raise ValueError("Expression contains invalid characters.")
+
+    return expression.replace(" ", "")
+```
+
+Example 3: Parentheses Validation (Checking for Proper Pairing)
+```python
+def is_balanced(expression: str) -> bool:
+    """
+    Checks whether a mathematical expression has properly paired parentheses.
+
+    Args:
+        expression (str): A string containing the mathematical expression.
+    
+    Returns:
+        bool: True if parentheses are correctly paired, otherwise False.
+    """
+    stack = []
+    for char in expression:
+        if char == '(':
+            stack.append(char)
+        elif char == ')':
+            if not stack:
+                return False
+            stack.pop()
+    return not stack
+```
+
+The generated code must be clean, efficient, and easy to maintain.
